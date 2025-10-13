@@ -1,0 +1,25 @@
+/*
+  @author : Sreelekha Mondal.
+  @date : 12 October, 2025. 
+  HTML file : HTML_DIY-05_Sreelekha_Mondal_II.html
+*/
+
+/* Styling for the body */
+.body
+{
+  margin : 40px;
+  padding-left : 40px;
+  border : 5px solid #B6AE9F;
+  border-radius : 20px;
+  box-shadow : 4px 8px 10px gray;
+  letter-spacing : 1px;
+  font-family : Symbola;
+  font-size : 18px;
+  color : #043915;
+}
+
+/* To make the headings looks different, adding underline to them. */
+.headings
+{
+  text-decoration : underline;
+}
