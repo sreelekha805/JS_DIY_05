@@ -44,7 +44,22 @@ dispEachName (parentElement, students);
 // before displaying the all property of students with grade > 90, this is the heading releted to the work.
 document.getElementById("heading2").innerHTML = "The Students with grade > 90 - ";
 
-// Seperating the students according to the condition of grade using filter method.
+// This function will take one object from the array of objects, then it will check the grade is above 90 or not. 
+function checkGrade (obj)
+{
+  // When the value of grade will be greater than 90, the function will return 1 otherwise it will return 0.
+  if (obj.grade > 90)
+  {
+    return 1;
+  }
+
+  else 
+  {
+    return 0;
+  }
+}
+
+// Seperating the students objecs and checking the result is 1 or 0, if it is 1, then display the object.
 function studentsAbove90 (list, arr)
 {
   // At first calculating the length of the array of object for deciding how many time the loop will be run.
@@ -54,7 +69,8 @@ function studentsAbove90 (list, arr)
   let k = 0;
   while (k < size)
   {
-    if ((arr[k].grade) > 90)
+    result = checkGrade (arr[k]);
+    if (result === 1)
     {
       // To display each name seperately, different <p> element is created dynamically.
       const para = document.createElement("p");
