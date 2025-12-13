@@ -1,5 +1,5 @@
-// Creating the object.
-const students = [{name: "Koyel", age: "17", grade: "60"}, {name: "Rupsweta", age: "18", grade: "95"}, {name: "Arunima", age: "18", grade: "87"}, {name: "Mrittika", age: "19", grade: "92"}, {name: "Sanchita", age: "20", grade: "90"}];
+// Creating the array of objects.
+const students = [{name: "Koyel", age: 17, grade: 60}, {name: "Rupsweta", age: 18, grade: 95}, {name: "Arunima", age: 18, grade: 87}, {name: "Mrittika", age: 19, grade: 92}, {name: "Sanchita", age: 20, grade: 90}];
 
 let size = students.length;
 console.log (size);
@@ -44,11 +44,11 @@ dispEachName (parentElement, students);
 // before displaying the all property of students with grade > 90, this is the heading releted to the work.
 document.getElementById("heading2").innerHTML = "The Students with grade > 90 - ";
 
-// This function will take one object from the array of objects, then it will check the grade is above 90 or not. 
-function checkGrade (obj)
+// This function will take one value from the array of objects, then it will check with the given value 90.
+function checkWithVal (num)
 {
-  // When the value of grade will be greater than 90, the function will return 1 otherwise it will return 0.
-  if (obj.grade > 90)
+  // When the value greater than 90, the function will return 1 otherwise it will return 0.
+  if (num > 90)
   {
     return 1;
   }
@@ -59,7 +59,7 @@ function checkGrade (obj)
   }
 }
 
-// Seperating the students objecs and checking the result is 1 or 0, if it is 1, then display the object.
+// Seperating the students objecs and extracting the value of the grade property and checking the result is 1 or 0, if it is 1, then display the object.
 function studentsAbove90 (list, arr)
 {
   // At first calculating the length of the array of object for deciding how many time the loop will be run.
@@ -69,7 +69,12 @@ function studentsAbove90 (list, arr)
   let k = 0;
   while (k < size)
   {
-    result = checkGrade (arr[k]);
+    // Extracting the value of the grade property.
+    checkingVal = arr[k].grade;
+    console.log (checkingVal);
+
+    // Call the function checkWithVal.
+    result = checkWithVal (checkingVal);
     if (result === 1)
     {
       // To display each name seperately, different <p> element is created dynamically.

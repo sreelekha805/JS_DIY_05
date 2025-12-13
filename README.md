@@ -13,9 +13,9 @@ To print the names of all the value of the name property of this array of object
 
 ### Third:
 To find the objects according to the value 90 of the particular property grade, two functions is created, 
-* `studentsAbove90`: This function is created to take the whole array of objects and it will seperate the objects one by one. After seperating each objects it will call the function `checkGrade`.
+* `studentsAbove90`: This function is created to take the whole array of objects and it will seperate the objects one by one. After seperating each objects it will extract the value of the grade property of each object and call the function `checkWithVal`.
 
-* `checkGrade` : This function will take one object and it will check the value of the property, that is above 90 or not. And it will return 1 if the condition is true otherwise it will return 0.
+* `checkWithVal` : This function will take one value and it will check the value is above 90 or not. And it will return 1 if the condition is true otherwise it will return 0.
 
 ### Fourth:
 A new object is added to this array of objects using the `push` method.
